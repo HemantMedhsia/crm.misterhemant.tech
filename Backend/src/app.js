@@ -40,7 +40,7 @@ const app = express();
 // Whitelist of allowed origins
 const whitelist = [
     "http://localhost:5174",
-    "https://erp1.vedanshtiwari.tech",
+    "https://schoolpage.misterhemant.tech",
     /^http:\/\/192\.168\.\d{1,3}\.\d{1,3}:5174$/,
 ];
 
