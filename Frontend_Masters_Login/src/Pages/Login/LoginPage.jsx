@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState("test@example.com");
+  const [email, setEmail] = useState("test1@example.com");
   const [role, setRole] = useState("Admin");
   const [error, setError] = useState("");
   const [password, setPassword] = useState("123456");
