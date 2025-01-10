@@ -1,0 +1,40 @@
+/* StudentAddForm.css */
+
+@media print {
+  /* Hide the print button */
+  button {
+    display: none;
+  }
+
+  /* Remove all margins and paddings for the printed document */
+  body,
+  html {
+    background-color: #e0e7ff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Ensure the print container has no margins */
+  .print-container {
+    zoom: 0.75;
+  }
+
+  /* Page break styling */
+  .page-break {
+    page-break-before: always;
+    display: block;
+    height: 0;
+    line-height: 0;
+  }
+
+  /* Customizations for print layout */
+  .border {
+    border: none !important; /* Remove borders for a clean print */
+  }
+
+  /* Adjust watermark for print */
+  .print-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

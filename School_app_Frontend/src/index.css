@@ -1,0 +1,482 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7"></path></svg>') no-repeat right 0.75rem center;
+    background-size: 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  .custom-option {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+}
+
+.custom-option:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 50%; /* Make the border radius 50% for a round shape */
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Set a fixed width */
+  height: 30px; /* Set a fixed height */
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* index.css */
+
+/* Hide scrollbar for all browsers */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* For inputs */
+input::placeholder {
+  color: #40475a; /* Adjust this color as needed */
+  opacity: 1; /* Ensure the placeholder is fully opaque */
+}
+
+/* For selects (not directly applicable, but if you style it, use this) */
+select::placeholder {
+  color: #40475a; /* Adjust this color as needed */
+  opacity: 1; /* Ensure the placeholder is fully opaque */
+}
+
+/* Calendar */
+
+/* Global Styling */
+body {
+  margin: 0;
+  padding: 0;
+  color: #d0d0d0;
+}
+
+.calendar-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #283046;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  padding: 20px;
+  background-color: #283046;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 1px solid #3a3d4a;
+}
+
+.add-event-btn {
+  background-color: #7367F0; /* Primary blue shade */
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.add-event-btn:hover {
+  background-color: #4752c4; /* Darker shade on hover */
+}
+
+.filters {
+  width: 100%;
+}
+
+.filter-title {
+  margin-bottom: 15px;
+  color: #d0d0d0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.filter-list input {
+  margin-right: 10px;
+  accent-color: #7367F0; /* Matches the button color */
+}
+
+/* Calendar Container */
+.calendar-container {
+  flex: 1;
+  background-color: #283046;
+}
+
+/* Toolbar Styling */
+.calendar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #283046;
+  border-bottom: 1px solid #3a3d4a;
+}
+
+.calendar-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #b0b3c6;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover {
+  color: #ffffff;
+}
+
+.view-buttons {
+  display: flex;
+  gap: 0px;
+}
+
+.view-btn {
+  background: transparent;
+  border: 1px solid #7367F0;
+  color: #7367F0;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+  letter-spacing: 1px;
+}
+
+.view-btn:hover {
+  background: #7367F0;
+  color: #ffffff;
+}
+
+/* Event Styling */
+.rbc-event {
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.rbc-month-view {
+  background: #283046;
+}
+
+.rbc-time-view,
+.rbc-agenda-view {
+  background: #283046;
+}
+
+.rbc-header,
+.rbc-date-cell,
+.rbc-time-header-cell,
+.rbc-time-slot,
+.rbc-today {
+  color: #d0d0d0;
+  border-color: #3a3d4a;
+}
+
+/* Previous and Next Month Dates */
+.rbc-day-bg {
+  background-color: #283046; /* Ensure the background matches */
+}
+
+.rbc-off-range {
+  color: #3a3d4a; /* Dimmed color similar to the background */
+  background-color: #283046; /* Matches main background */
+  font-weight: 400;
+}
+
+.rbc-off-range-bg {
+  background-color: #283046; /* Matches main background */
+}
+
+/* Loader */
+
+.pyramid-loader {
+  position: relative;
+  width: 400px;
+  height: 180px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom right, #FFA500, #FF4500);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 20%, 0% 100%, 100% 100%);
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: linear-gradient(to bottom right, #4C51BF, #65FA9E);
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: linear-gradient(to bottom right, #4C51BF, #65FA9E);
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: linear-gradient(to bottom right, #4C51BF, #65FA9E);
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: linear-gradient(to bottom right, #4C51BF, #65FA9E);
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 100px;
+  height: 100px;
+  background: #4C51BF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-50px); /* Adjusted translateZ for space */
+  filter: blur(12px);
+}
+
+.loaderText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #4C51BF, #65FA9E);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 200%; /* Ensure the gradient covers the entire text */
+  animation: gradientAnimation 2s infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    font-size: 20px;
+  }
+  50% {
+    background-position: 100% 50%;
+    font-size: 22px;
+  }
+  100% {
+    background-position: 0% 50%;
+    font-size: 20px;
+  }
+}
+
+/* table loader */
+
+.loader {
+  width: 100%;
+  height: 350px; /* Adjust height to suit the content area */
+  display: flex; 
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #283046;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top: 20px; /* To add space from the top */
+}
+
+.loader::after {
+  content: '';  
+  width: 80px; /* Loader width */
+  height: 80px; /* Loader height */
+  background-image: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 80%), 
+    radial-gradient(circle 28px at 28px 28px, #DDD 99%, transparent 0),
+    linear-gradient(#DDD 24px, transparent 0),
+    linear-gradient(#DDD 18px, transparent 0),
+    linear-gradient(#DDD 66px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px, 290px 56px;
+  background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+  border-radius: 10px;
+}
+
+@keyframes animloader {
+  0% {
+    background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+  100% {
+    background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+  }
+}
+
+
+/* Square Loader */
+
+/* From Uiverse.io by Shoh2008 */ 
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Full screen height */
+  padding-right: 40px;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 30px, 0 -30px;
+  border-radius: 4px;
+  background: currentColor;
+  display: block;
+  position: relative;
+  color: #FFF;
+  box-sizing: border-box;
+  animation: animloader 2s ease infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 30px, 0 -30px;
+  border-radius: 4px;
+  background: currentColor;
+  color: #FFF;
+  position: absolute;
+  left: 30px;
+  top: 0;
+  animation: animloader 2s 0.2s ease infinite;
+}
+
+.loader::before {
+  animation-delay: 0.4s;
+  left: 60px;
+}
+
+@keyframes animloader {
+  0% {
+    top: 0;
+    color: #65FA9E;
+  }
+
+  50% {
+    top: 30px;
+    color: rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    top: 0;
+    color: #65FA9E;
+  }
+}
+
+/* Printing Modules */
+
+@media print {
+  .no-print {
+    display: block !important; /* Ensure it's visible in print mode */
+  }
+}
+
+.no-print {
+  display: none; /* Hide in regular view */
+}
+
+.dropdown-menu {
+  z-index: 9999 !important;
+}
+
+
